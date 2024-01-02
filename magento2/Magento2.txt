@@ -1,0 +1,441 @@
+
+
+sudo apt update && sudo apt upgrade
+
+sudo apt install ca-certificates apt-transport-https software-properties-common gnupg2 unzip -y
+
+echo "deb https://packages.sury.org/php/ $(lsb_release -sc) main" | sudo tee /etc/apt/sources.list.d/sury.list
+
+wget -qO - https://packages.sury.org/php/apt.gpg | sudo apt-key add -
+
+
+PHP 8.1 installation
+
+sudo apt update
+
+sudo apt install php8.1-{cgi,bcmath,common,curl,fpm,gd,intl,mbstring,mysql,soap,xml,xsl,zip,cli}
+
+sudo sed -i "s/memory_limit = .*/memory_limit = 768M/" /etc/php/8.1/fpm/php.ini
+sudo sed -i "s/upload_max_filesize = .*/upload_max_filesize = 128M/" /etc/php/8.1/fpm/php.ini
+sudo sed -i "s/zlib.output_compression = .*/zlib.output_compression = on/" /etc/php/8.1/fpm/php.ini
+sudo sed -i "s/max_execution_time = .*/max_execution_time = 18000/" /etc/php/8.1/fpm/php.ini
+
+Install Nginx
+
+sudo apt install nginx -y
+sudo systemctl status nginx
+
+sudo nano /etc/nginx/sites-enabled/magento.conf
+
+upstream fastcgi_backend {
+server unix:/run/php/php8.1-fpm.sock;
+}
+
+server {
+server_name yourdomain.com;
+listen 80;
+set $MAGE_ROOT /opt/magento2;
+set $MAGE_MODE developer; # or production
+
+access_log /var/log/nginx/magento2-access.log;
+error_log /var/log/nginx/magento2-error.log;
+
+include /opt/magento2/nginx.conf.sample;
+}
+
+
+Install MySQL Server
+
+wget https://dev.mysql.com/get/mysql-apt-config_0.8.22-1_all.deb
+
+sudo dpkg -i mysql-apt-config_0.8.22-1_all.deb
+
+sudo apt update
+Error
+
+gpg --recv-keys --keyserver hkp://keyserver.ubuntu.com:80 B7B3B788A8D3785C
+
+gpg --export --armor B7B3B788A8D3785C | sudo apt-key add -
+
+sudo apt-get update
+
+sudo apt install mysql-server
+
+pasword: redhat
+
+sudo mysql
+
+sudo mysql_secure_installation
+
+sudo mysql -u root -pm0d1fyth15 
+
+mysql> CREATE DATABASE magentodb;
+mysql> CREATE USER 'magento'@'localhost' IDENTIFIED BY 'm0d1fyth15';
+mysql> GRANT ALL ON magentodb.* TO 'magento'@'localhost';
+mysql> FLUSH PRIVILEGES;
+mysql> \q
+
+Install Elasticsearch
+
+curl -fsSL https://artifacts.elastic.co/GPG-KEY-elasticsearch | sudo apt-key add -
+
+sudo sh -c 'echo "deb https://artifacts.elastic.co/packages/7.x/apt stable main" > /etc/apt/sources.list.d/elastic-7.x.list'
+
+sudo apt update -y
+sudo apt install elasticsearch -y
+
+sudo systemctl --now enable elasticsearch
+
+curl -X GET "localhost:9200"
+
+Install Composer
+
+curl -sS https://getcomposer.org/installer -o composer-setup.php
+
+sudo php composer-setup.php --install-dir=/usr/local/bin --filename=composer
+
+XXX prompt you for a username and password. XXX
+XXX username would be your public key, and the password is the private key XXX
+
+Public: fe51035bf44d91ce23a3065c7cebec1d
+
+Private: 3917b7fc487658370cf333bc7c6e69a9
+
+cd /opt/magento2
+
+sudo bin/magento setup:install \
+--base-url=http://3.6.10.12 \
+--db-host=localhost \
+--db-name=magentodb \
+--db-user=magento \
+--db-password=m0d1fyth15 \
+--admin-firstname=admin \
+--admin-lastname=admin \
+--admin-email=admin@admin.com \
+--admin-user=admin \
+--admin-password=m0d1fyth15one \
+--language=en_US \
+--currency=USD \
+--timezone=America/Chicago \
+--use-rewrites=1
+
+====================================================================================================================
+nano /etc/security/limits.conf
+
+*       hard    nofile  unlimited
+*       soft    nofile  unlimited
+
+
+
+===============================================================
+
+
+cat /etc/elasticsearch/elasticsearch.yml
+
+ ======================== Elasticsearch Configuration =========================
+#
+# NOTE: Elasticsearch comes with reasonable defaults for most settings.
+#       Before you set out to tweak and tune the configuration, make sure you
+#       understand what are you trying to accomplish and the consequences.
+#
+# The primary way of configuring a node is via this file. This template lists
+# the most important settings you may want to configure for a production cluster.
+#
+# Please consult the documentation for further information on configuration options:
+# https://www.elastic.co/guide/en/elasticsearch/reference/index.html
+#
+# ---------------------------------- Cluster -----------------------------------
+#
+# Use a descriptive name for your cluster:
+#
+#cluster.name: my-application
+#
+# ------------------------------------ Node ------------------------------------
+#
+# Use a descriptive name for the node:
+#
+#node.name: node-1
+#
+# Add custom attributes to the node:
+#
+#node.attr.rack: r1
+#
+# ----------------------------------- Paths ------------------------------------
+#
+# Path to directory where to store the data (separate multiple locations by comma):
+#
+path.data: /var/lib/elasticsearch
+#
+# Path to log files:
+#
+path.logs: /var/log/elasticsearch
+#
+# ----------------------------------- Memory -----------------------------------
+#
+# Lock the memory on startup:
+#
+#bootstrap.memory_lock: true
+#
+# Make sure that the heap size is set to about half the memory available
+# on the system and that the owner of the process is allowed to use this
+# limit.
+#
+# Elasticsearch performs poorly when the system is swapping the memory.
+#
+# ---------------------------------- Network -----------------------------------
+#
+# By default Elasticsearch is only accessible on localhost. Set a different
+# address here to expose this node on the network:
+#
+network.host: 0.0.0.0
+#
+# By default Elasticsearch listens for HTTP traffic on the first free port it
+# finds starting at 9200. Set a specific HTTP port here:
+#
+http.port: 9200
+#
+# For more information, consult the network module documentation.
+#
+# --------------------------------- Discovery ----------------------------------
+#
+# Pass an initial list of hosts to perform discovery when this node is started:
+# The default list of hosts is ["127.0.0.1", "[::1]"]
+#
+discovery.seed_hosts: ["0.0.0.0"]
+#
+# Bootstrap the cluster using an initial set of master-eligible nodes:
+#
+#cluster.initial_master_nodes: ["node-1", "node-2"]
+#
+# For more information, consult the discovery and cluster formation module documentation.
+#
+# ---------------------------------- Various -----------------------------------
+#
+# Require explicit names when deleting indices:
+#
+#action.destructive_requires_name: true
+#
+# ---------------------------------- Security ----------------------------------
+#
+#                                 *** WARNING ***
+#
+# Elasticsearch security features are not enabled by default.
+# These features are free, but require configuration changes to enable them.
+# This means that users don’t have to provide credentials and can get full access
+# to the cluster. Network connections are also not encrypted.
+#
+# To protect your data, we strongly encourage you to enable the Elasticsearch security features. 
+# Refer to the following documentation for instructions.
+#
+# https://www.elastic.co/guide/en/elasticsearch/reference/7.16/configuring-stack-security.html
+
+root@ip-172-26-6-183:~# cat /etc/elasticsearch/jvm.options
+################################################################
+##
+## JVM configuration
+##
+################################################################
+##
+## WARNING: DO NOT EDIT THIS FILE. If you want to override the
+## JVM options in this file, or set any additional options, you
+## should create one or more files in the jvm.options.d
+## directory containing your adjustments.
+##
+## See https://www.elastic.co/guide/en/elasticsearch/reference/7.17/jvm-options.html
+## for more information.
+##
+################################################################
+
+
+
+################################################################
+## IMPORTANT: JVM heap size
+################################################################
+##
+## The heap size is automatically configured by Elasticsearch
+## based on the available memory in your system and the roles
+## each node is configured to fulfill. If specifying heap is
+## required, it should be done through a file in jvm.options.d,
+## and the min and max should be set to the same value. For
+## example, to set the heap to 4 GB, create a new file in the
+## jvm.options.d directory containing these lines:
+##
+-Xms256m
+-Xmx256m
+##
+## See https://www.elastic.co/guide/en/elasticsearch/reference/7.17/heap-size.html
+## for more information
+##
+################################################################
+
+
+################################################################
+## Expert settings
+################################################################
+##
+## All settings below here are considered expert settings. Do
+## not adjust them unless you understand what you are doing. Do
+## not edit them in this file; instead, create a new file in the
+## jvm.options.d directory containing your adjustments.
+##
+################################################################
+
+## GC configuration
+8-13:-XX:+UseConcMarkSweepGC
+8-13:-XX:CMSInitiatingOccupancyFraction=75
+8-13:-XX:+UseCMSInitiatingOccupancyOnly
+
+## G1GC Configuration
+# NOTE: G1 GC is only supported on JDK version 10 or later
+# to use G1GC, uncomment the next two lines and update the version on the
+# following three lines to your version of the JDK
+# 10-13:-XX:-UseConcMarkSweepGC
+# 10-13:-XX:-UseCMSInitiatingOccupancyOnly
+14-:-XX:+UseG1GC
+
+## JVM temporary directory
+-Djava.io.tmpdir=${ES_TMPDIR}
+
+## heap dumps
+
+# generate a heap dump when an allocation from the Java heap fails; heap dumps
+# are created in the working directory of the JVM unless an alternative path is
+# specified
+-XX:+HeapDumpOnOutOfMemoryError
+
+# exit right after heap dump on out of memory error. Recommended to also use
+# on java 8 for supported versions (8u92+).
+9-:-XX:+ExitOnOutOfMemoryError
+
+# specify an alternative path for heap dumps; ensure the directory exists and
+# has sufficient space
+-XX:HeapDumpPath=/var/lib/elasticsearch
+
+# specify an alternative path for JVM fatal error logs
+-XX:ErrorFile=/var/log/elasticsearch/hs_err_pid%p.log
+
+## JDK 8 GC logging
+8:-XX:+PrintGCDetails
+8:-XX:+PrintGCDateStamps
+8:-XX:+PrintTenuringDistribution
+8:-XX:+PrintGCApplicationStoppedTime
+8:-Xloggc:/var/log/elasticsearch/gc.log
+8:-XX:+UseGCLogFileRotation
+8:-XX:NumberOfGCLogFiles=32
+8:-XX:GCLogFileSize=64m
+
+# JDK 9+ GC logging
+9-:-Xlog:gc*,gc+age=trace,safepoint:file=/var/log/elasticsearch/gc.log:utctime,pid,tags:filecount=32,filesize=64m
+
+======================================================================================================================
+
+Magento Admin URI: /admin_1tqoow
+
+chown -R test-ssh:clp /opt/magento2
+sudo nginx -t
+
+sudo systemctl restart nginx
+
+sudo -u test-ssh bin/magento module:disable Magento_TwoFactorAuth   ------------- check
+
+sudo -u test-ssh bin/magento cache:flush           ------------- check
+
+sudo -u test-ssh bin/magento cron:install            ------------- check
+
+
+bin/magento admin:user:create --admin-user=kiran --admin-password=a1As2Sd3D@ --admin-email=kiran@localhost.com
+
+http://3.6.10.12/
+http://3.6.10.12/admin_1tqoow
+
+
+From UI
+http://3.6.10.12/admin_1tqoow
+
+Stores >> configuration >> web >>  Base URLs (Secure) >>  https://3.6.10.12/
+
+save configuration
+
+
+=========================================================
+
+####### SSL SELF CERTIFICATE ############
+
+openssl genpkey -algorithm RSA -out private_key.pem
+
+openssl req -new -key private_key.pem -out csr.pem
+
+openssl x509 -req -in csr.pem -signkey private_key.pem -out certificate.pem
+
+openssl x509 -in certificate.pem -text -noout
+
+=======================================
+
+vi /etc/nginx/sites-enabled/magento.conf 
+
+
+upstream fastcgi_backend {
+server unix:/run/php/php8.1-test-ssh-fpm.sock;
+}
+
+
+server {
+server_name 3.6.10.12;
+listen 80;
+
+listen 443 ssl default_server;
+        listen [::]:443 ssl default_server;
+        ssl_certificate /etc/nginx/ssl/certificate.pem;
+        ssl_certificate_key /etc/nginx/ssl/private_key.pem;
+
+#return 301 https://$server_name$request_uri;
+
+set $MAGE_ROOT /opt/magento2;
+set $MAGE_MODE developer; # or production
+
+access_log /var/log/nginx/magento2-access.log;
+error_log /var/log/nginx/magento2-error.log;
+
+include /opt/magento2/nginx.conf.sample;
+}
+
+======================================================
+
+systemctl restart nginx
+
+https://3.6.10.12/
+https://3.6.10.12/admin_1tqoow
+
+USER: kiran
+PASS: a1As2Sd3D@
+
+===================================================================================================================
+
+PHP installation
+
+vim /etc/nginx/sites-available/phpmyadmin
+
+
+
+ln -s /etc/nginx/sites-available/phpmyadmin  /etc/nginx/sites-enabled
+
+
+/etc/php/8.1/fpm/pool.d/www.conf
+
+
+
+chown test-ssh:clp /var/run/php/php8.1-fpm.sock
+
+
+systemctl restart nginx
+systemctl restart php8.1-fpm.sock
+
+
+PHP Login
+
+http://3.6.10.12:8080
+
+USER: root
+PASS: redhat
+
+====================================================================================================================
