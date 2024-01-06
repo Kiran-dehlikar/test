@@ -1,0 +1,5 @@
+TASK_NAME, TRIGGER_TYPE, TASK_SCRIPT_PATH
+task1, manual, /home/opstree/codekiran/system/tasks/example1.sh
+task2, manual, /home/opstree/codekiran/system/tasks/example2.sh
+task3, scheduled, /home/opstree/codekiran/system/tasks/example3.sh
+task4, scheduled, /home/opstree/codekiran/system/tasks/example4.sh

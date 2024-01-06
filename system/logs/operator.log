@@ -1,0 +1,12 @@
+[01/06/24: 10:42:15] [INFO] opstree Task added: Name: task1, Type: manual, Script: /home/opstree/codekiran/system/tasks/example1.sh
+[01/06/24: 10:42:15] [INFO] opstree Task added: Name: task2, Type: manual, Script: /home/opstree/codekiran/system/tasks/example2.sh
+[01/06/24: 10:42:16] [INFO] opstree Task added: Name: task1, Type: , Script: /home/opstree/codekiran/system/tasks/example1.sh
+[01/06/24: 10:43:32] [INFO] opstree Task added: Name: task2, Type: , Script: /home/opstree/codekiran/system/tasks/example2.sh
+[01/06/24: 10:43:47] [INFO] opstree Task added: Name: task2, Type: , Script: /home/opstree/codekiran/system/tasks/example2.sh
+[01/06/24: 10:43:57] [INFO] opstree Task added: Name: task1, Type: , Script: 
+[01/06/24: 10:44:22] [INFO] opstree Task added: Name: task2, Type: , Script: 
+[01/06/24: 10:44:33] [INFO] opstree Task added: Name: task1, Type: , Script: 
+[01/06/24: 10:45:12] [INFO] opstree Task added: Name: task2, Type: , Script: 
+[01/06/24: 10:45:14] [INFO] opstree Task added: Name: task2, Type: , Script: 
+[01/06/24: 10:45:19] [INFO] opstree Task added: Name: task3, Type: scheduled, Script: /home/opstree/codekiran/system/tasks/example3.sh
+[01/06/24: 10:45:19] [INFO] opstree Task added: Name: task4, Type: scheduled, Script: /home/opstree/codekiran/system/tasks/example4.sh
