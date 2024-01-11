@@ -57,10 +57,15 @@
 
 ## Job For Delete branch
 ![image](https://github.com/Kiran-dehlikar/test/assets/104997588/6aee82cf-d3b2-47f1-9cf4-e8991383eb7c)
-![image](https://github.com/Kiran-dehlikar/test/assets/104997588/a4d66b30-0bfe-4eb7-970a-99656174a0b0)
-![image](https://github.com/Kiran-dehlikar/test/assets/104997588/7c37ff16-bb67-4761-9ce6-1643cd8465f8)
-![image](https://github.com/Kiran-dehlikar/test/assets/104997588/9a42290d-3cb0-4305-8371-55dd1836288f)
-![image](https://github.com/Kiran-dehlikar/test/assets/104997588/bb1e8a6a-74bf-484a-901a-1ef7ea821aa4)
+![image](https://github.com/Kiran-dehlikar/test/assets/104997588/8025be4e-ecc4-4398-8c47-d26951b78c5a)
+![image](https://github.com/Kiran-dehlikar/test/assets/104997588/89d7143d-7906-4a61-a6d8-91ea8f6202c7)
+![image](https://github.com/Kiran-dehlikar/test/assets/104997588/74c113d7-977e-4bb6-bcdd-e8173842f1f6)
+
+![image](https://github.com/Kiran-dehlikar/test/assets/104997588/64b2f2ff-706e-4cd5-b418-16298f372490)
+![image](https://github.com/Kiran-dehlikar/test/assets/104997588/8c1fe617-e45b-4eba-894a-f5f43276e7a8)
+
+![image](https://github.com/Kiran-dehlikar/test/assets/104997588/5459fe5c-befa-4413-b13e-f8ca94f7c8db)
+
 
 ## Job For Logs of branch
 ![image](https://github.com/Kiran-dehlikar/test/assets/104997588/483a41a2-7b6a-47b4-8cea-fde3998f77cb)
