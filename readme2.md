@@ -8,6 +8,9 @@
 
 ![image](https://github.com/Kiran-dehlikar/test/assets/104997588/56fb1e15-4c9d-450b-8099-453d76cfea0b)
 ![image](https://github.com/Kiran-dehlikar/test/assets/104997588/00feb1ca-e33c-485e-8d8f-31fede022b1a)
+![image](https://github.com/Kiran-dehlikar/test/assets/104997588/eb3151c9-0af9-487e-849c-962013b791b3)
+![image](https://github.com/Kiran-dehlikar/test/assets/104997588/6748db36-85b8-478a-b0dd-633276d90d4d)
+![image](https://github.com/Kiran-dehlikar/test/assets/104997588/ebf05385-845a-496b-8bc4-03b6557d2174)
 
 ## Install plugin
 ![image](https://github.com/Kiran-dehlikar/test/assets/104997588/6bde33d5-cb8e-4ee0-8815-4881263111de)
