@@ -1,4 +1,28 @@
+
 # Assignment 01
+
+Creating below Jenkins utilities to control operations in a Git repository.
+Branch Exist:
+-   Check if a specified branch exists in the repository.
+Create Branch:
+-   Create a new branch in the repository.
+Merge 2 Branches:
+-   Merge two branches
+-   In case of failure generate an HTML report
+Delete Branch:
+-   Delete a specified branch in the repository.
+List commit logs of Certain Branch
+-   Should be able to accept search parameters
+-   Should show it in HTML report
+Good to do:
+-   Managed these jobs via JOB DSL
+
+
+
+## Plugin's  used.
+
+[![Git Plugin](https://img.shields.io/badge/Git-green.svg)](https://plugins.jenkins.io/git/)
+
 ## Step1 : Check Branch exist or not.
 ### Create a freestyle project by selecting new item in dashboad.
 ![image](https://github.com/Kiran-dehlikar/test/assets/104997588/1e4c8d1d-72e3-4483-b568-106084881669)
@@ -123,13 +147,6 @@
 ### Output 
 ![image](https://github.com/Kiran-dehlikar/test/assets/104997588/6b928147-f171-4bcd-80da-2bb34f19d617)
 
+## Authors
 
-
-
-
-
-
-
-
-
-
+- [Kiran Dehlikar](https://github.com/Kiran-dehlikar)
