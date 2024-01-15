@@ -99,15 +99,28 @@
 ![image](https://github.com/Kiran-dehlikar/test/assets/104997588/5459fe5c-befa-4413-b13e-f8ca94f7c8db)
 
 
-## Job For Logs of branch
+## Step1 : Check logs of branch.
+### Create a freestyle project by selecting new item in dashboad.
+![image](https://github.com/Kiran-dehlikar/test/assets/104997588/2b7fbe76-71fb-4aec-881a-c1e10c6e8d88)
+
+### Now you enter the configuration page here select the string parameter in "general" tab, crete two string one for  branch name(variable) and another for report_name(variable).  
 ![image](https://github.com/Kiran-dehlikar/test/assets/104997588/483a41a2-7b6a-47b4-8cea-fde3998f77cb)
 ![image](https://github.com/Kiran-dehlikar/test/assets/104997588/9f2b0a20-cc96-40e5-9101-31f0e07689ca)
+
+### Next go to the "source code management" tab and select git repository and if repository is private then put credentials.
 ![image](https://github.com/Kiran-dehlikar/test/assets/104997588/92be3a1c-775b-4631-b224-cc057d3c0aba)
+
+### Next jump to the "build steps" tab select execute shell write the command shown in picture below and save/apply.
 ![image](https://github.com/Kiran-dehlikar/test/assets/104997588/1a39e803-5116-4b93-8778-b270a0070043)
+
+### Now go to dashboard and select creted job you will see the "build with parameter" option click on it and enter branch name (you want to see log) and report_name(name of report) >> BUILD 
 ![image](https://github.com/Kiran-dehlikar/test/assets/104997588/a16ff777-7aaa-408c-89c5-bf41828aed2a)
 ![image](https://github.com/Kiran-dehlikar/test/assets/104997588/c806693b-a149-4692-8b65-7ca04a6628e1)
 ![image](https://github.com/Kiran-dehlikar/test/assets/104997588/51bcab67-b62a-40aa-bf88-dbdfb135ca35)
+
+### Go to the workspace you will see the report is generated in "html" format in below image.
 ![image](https://github.com/Kiran-dehlikar/test/assets/104997588/979f1f0a-b145-4927-a33b-96a4f4fa9fa8)
+### Output 
 ![image](https://github.com/Kiran-dehlikar/test/assets/104997588/6b928147-f171-4bcd-80da-2bb34f19d617)
 
 
