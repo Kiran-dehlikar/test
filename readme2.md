@@ -51,7 +51,11 @@ Also go through all authorization strategy
 Point 2:-
 -   Enable SSO with Goggle
 
+## Plugin's  used.
 
+[![Jenkins Plugin](https://img.shields.io/badge/Role_Based_Authorization_Strategy-red.svg)](https://plugins.jenkins.io/role-strategy/)
+
+## Step1 
 ![image](https://github.com/Kiran-dehlikar/test/assets/104997588/4ba43855-11e5-44c1-906b-4f5331b44874)
 
 ![image](https://github.com/Kiran-dehlikar/test/assets/104997588/0685ba46-3daa-4ef6-bdf1-fcf70f124946)
