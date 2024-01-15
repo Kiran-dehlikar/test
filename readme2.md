@@ -73,7 +73,7 @@ For Example shown below :
 ## Similarly generate all the 8 remaining jobs.
 ![image](https://github.com/Kiran-dehlikar/test/assets/104997588/00feb1ca-e33c-485e-8d8f-31fede022b1a)
 
-## Create a view to sort job.
+## Step2 : Create a view to sort job.
 ### Developer view
 ![image](https://github.com/Kiran-dehlikar/test/assets/104997588/eb3151c9-0af9-487e-849c-962013b791b3)
 ### Testing view
@@ -81,12 +81,12 @@ For Example shown below :
 ### Devops view
 ![image](https://github.com/Kiran-dehlikar/test/assets/104997588/ebf05385-845a-496b-8bc4-03b6557d2174)
 
-## Create Users :
+## Step3 : Create Users :
 - Dashboard >> Manage Jenkins >> Users >> Create User
 ![image](https://github.com/Kiran-dehlikar/test/assets/104997588/db52a80b-3803-4703-ae2c-d2db1b787194)
 ![image](https://github.com/Kiran-dehlikar/test/assets/104997588/9c9f6681-114d-4af1-80ab-c807398a4200)
 
-## Similarly create user's for different roles listed below.
+### Similarly create user's for different roles listed below.
 ### For developer role 
 - developer-1 
 - developer-2 
@@ -100,15 +100,15 @@ For Example shown below :
 ![image](https://github.com/Kiran-dehlikar/test/assets/104997588/6e048222-1ad8-42d9-b583-003f5c113432)
 
 
-## Install plugin "Role-based Authorization Strategy"
+## Step4 : Install plugin "Role-based Authorization Strategy"
 - Dashboard > Manage Jenkins > Plugins > Available Plugin > Role-based Authorization Strategy
 ![image](https://github.com/Kiran-dehlikar/test/assets/104997588/6bde33d5-cb8e-4ee0-8815-4881263111de)
 
 - Configuration : Dashboard > Manage Jenkins > Security > Authentication > Role-based
 ![image](https://github.com/Kiran-dehlikar/test/assets/104997588/6b9206d6-e7f6-44cd-b0e4-369d3640527d)
 
-## Configuration of Jobs 
-- Dashboard > Manage Jenkins > Manage and Assign Role > Manage roles
+## Step5 : Configuration of Jobs 
+### Dashboard > Manage Jenkins > Manage and Assign Role > Manage roles
 - Follow the steps as shown below.
 ![image](https://github.com/Kiran-dehlikar/test/assets/104997588/aa6921cf-9e4e-43d3-9f0c-ef8f310aaba5)
 ![image](https://github.com/Kiran-dehlikar/test/assets/104997588/35d78937-f691-449c-aba4-3a6f4aab976e)
@@ -118,7 +118,7 @@ For Example shown below :
 ![image](https://github.com/Kiran-dehlikar/test/assets/104997588/ae81d251-a17d-4153-af6f-e31ae08b4c6d)
 ![image](https://github.com/Kiran-dehlikar/test/assets/104997588/7ea07783-c30e-4ae7-aef7-49579981be49)
 
-## Output's
+## Step6 : Output's
 ### Login using user developer-1
 - Here you will see "developer-1" user can see/read all developer jobs and write/run builds as well.
 ![image](https://github.com/Kiran-dehlikar/test/assets/104997588/43aeb134-0e85-4fee-9da0-6d2390b97fec)
