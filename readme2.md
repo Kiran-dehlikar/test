@@ -130,6 +130,54 @@ For Example shown below :
 ### Login using user devops-1
 - Here you will see "devops-1" user can see/read all developer and testing user jobs and  write/run builds all devops jobs.
 ![image](https://github.com/Kiran-dehlikar/test/assets/104997588/2d7aaffd-08a4-4e87-a0b1-4996bf6aed49)
+
+# PART B : Google SSO
+
+![image](https://github.com/Kiran-dehlikar/test/assets/104997588/06d9df13-35e4-420f-a34d-658ffd052d56)
+
+![image](https://github.com/Kiran-dehlikar/test/assets/104997588/a850da63-1862-4c3d-94a0-458e27be09c3)
+
+![image](https://github.com/Kiran-dehlikar/test/assets/104997588/daa473b5-3514-40e5-9800-d9e4f6cbb20b)
+
+![image](https://github.com/Kiran-dehlikar/test/assets/104997588/cbf015ad-b9d0-4725-92b4-86d0947fff69)
+
+![image](https://github.com/Kiran-dehlikar/test/assets/104997588/b87d0182-99b5-4542-9628-e197188fe691)
+
+![image](https://github.com/Kiran-dehlikar/test/assets/104997588/e14648dd-11b9-440c-886e-e887fd8d759b)
+
+![image](https://github.com/Kiran-dehlikar/test/assets/104997588/e72cc559-b515-4f4f-b8cc-4e771b55ea5d)
+
+
+## Go to google cloud console
+
+![image](https://github.com/Kiran-dehlikar/test/assets/104997588/e4688891-5bce-4c3d-860f-10d4e95bebca)
+
+![image](https://github.com/Kiran-dehlikar/test/assets/104997588/5f5919c5-d15e-4ec9-892a-4dbecccad104)
+
+![image](https://github.com/Kiran-dehlikar/test/assets/104997588/a96f8896-b6f9-480a-9b1d-d1a37f27abb6)
+
+![image](https://github.com/Kiran-dehlikar/test/assets/104997588/77a66368-7848-4524-9cd1-3d759c71d3a6)
+
+![image](https://github.com/Kiran-dehlikar/test/assets/104997588/da5e4fd5-2534-428b-b91d-5df2febab4ad)
+
+![image](https://github.com/Kiran-dehlikar/test/assets/104997588/5f2d4b69-9062-4556-929f-f8279e85a2fa)
+
+![image](https://github.com/Kiran-dehlikar/test/assets/104997588/583c2a70-1d2c-48e1-9f56-79efc959a071)
+
+![image](https://github.com/Kiran-dehlikar/test/assets/104997588/cb228f27-d442-44dd-9908-54b96e79f92c)
+
+## Go to Jenkins Dashboard
+![image](https://github.com/Kiran-dehlikar/test/assets/104997588/359a7521-d4ca-4539-ad9a-45115f39cc3a)
+
+![image](https://github.com/Kiran-dehlikar/test/assets/104997588/22579f04-7599-4ecb-bb85-d641562e7f68)
+
+![image](https://github.com/Kiran-dehlikar/test/assets/104997588/5b6e997a-2eaa-4a3e-a3cf-a8280e072ee9)
+
+![image](https://github.com/Kiran-dehlikar/test/assets/104997588/238ed719-e1dd-4ebf-86cc-79b2927bfe61)
+
+![image](https://github.com/Kiran-dehlikar/test/assets/104997588/446c78d2-3755-426e-ab13-f7af2f4cd2d7)
+
+
 ## Authors
 
 - [Kiran Dehlikar](https://github.com/Kiran-dehlikar)
