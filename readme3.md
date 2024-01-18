@@ -35,6 +35,9 @@
 ![image](https://github.com/Kiran-dehlikar/test/assets/104997588/fc4eb058-adf2-429d-9477-cf852655c9c8)
 ![image](https://github.com/Kiran-dehlikar/test/assets/104997588/6109d40c-38f9-406d-9e6b-929658dbaaa6)
 
+## Final View
+![image](https://github.com/Kiran-dehlikar/test/assets/104997588/b83abe69-9338-40bb-8fe8-006b4585c75c)
+
 ## Email Notification
 ![image](https://github.com/Kiran-dehlikar/test/assets/104997588/01c1c619-15cc-47e2-ae78-da02e0867f0d)
 ![image](https://github.com/Kiran-dehlikar/test/assets/104997588/218f662b-264b-4006-88d2-5f94386a8207)
