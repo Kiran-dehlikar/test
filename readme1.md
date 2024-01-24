@@ -3,10 +3,6 @@
 
 ##  Problem Statements
 
-=============
-Assingment-1
-=============
-
 In this assignment you have to learn about deployment strategies:
     - Recreate deployment 
     - Rolling deployment 
@@ -31,7 +27,12 @@ Hint :
 1. Use ASG
 2. Use LB
 3. Use EC2 service
-4. Use AMI Snapshot 
+4. Use AMI Snapshot
+
+# aws
+![Screenshot from 2024-01-22 15-53-09](https://github.com/Kiran-dehlikar/test/assets/104997588/cfe37b90-0d9d-493f-b526-b0269ced5981)
+![Screenshot from 2024-01-22 16-48-04](https://github.com/Kiran-dehlikar/test/assets/104997588/c8f41260-f949-4457-9e13-7cb33649fbf8)
+![Screenshot from 2024-01-22 16-48-15](https://github.com/Kiran-dehlikar/test/assets/104997588/f4e752ea-59b5-45ff-8469-d62e3ccdb609)
 
 
 ## Authors
