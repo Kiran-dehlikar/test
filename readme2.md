@@ -167,6 +167,15 @@ You have told him yes, it is possible with path-based routing in the ALB. Now do
     - create listener rule so that {YOUR-ALB-DNS-NAME}/ninja2 should display welcome page of second ec2.
 
 ## Push all the updated images of the webpage to S3 bucket defined folders through any EC2 instance and maintain repo on that server only.
+## As per the client requirement we made the changes.
+## Go to the Load Balancer and add the rules as shown below and same has to update the EC2 server to fetch content at path.
+![image](https://github.com/Kiran-dehlikar/test/assets/104997588/d8144c58-f9c4-484e-8ee6-e22ef013cfb6)
+## Now hit the LB dns it will show nginx page
+![image](https://github.com/Kiran-dehlikar/test/assets/104997588/418a96f5-ea19-4120-840b-a2e45a983a03)
+## Now hit the same dns using /ninja1
+![image](https://github.com/Kiran-dehlikar/test/assets/104997588/541ad2a3-6579-4274-a572-142d724d517c)
+## Now hit the same dns using /ninja2
+![image](https://github.com/Kiran-dehlikar/test/assets/104997588/b73a41ff-488f-4d19-ac77-a24e8e837bc1)
 
 
 ## Day 5
