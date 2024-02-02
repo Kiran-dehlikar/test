@@ -1,38 +1,63 @@
 
 # Assignment 01
 
-##  Problem Statements
+#  Problem Statements
+## Infrastructure as a Code
+### Task Description 
 
-In this assignment you have to learn about deployment strategies:
-    - Recreate deployment 
-    - Rolling deployment 
-    - Blue-green deployment 
-    - A/B  deployment
-    - Canary deployment 
+- Create the following resources using terraform resource block :
+    - Create 1 VPC 
+        - eg : `ninja-vpc-01`
+    - Create 4 Subnet
+        - 2 public subnet
+            - eg : `ninja-pub-sub-01/02`
+        - 2 private subnet
+            - eg : `ninja-priv-sub-01/02`
+    - Create instances in it ( bastion and private instance)
+    - Create 1 IGW
+        - eg : `ninja-igw-01`
+    - Create 1 NAT 
+        - eg : `ninja-nat-01`
+    - Create 2 Route Table
+        - 1 for public subnet
+            - eg : `ninja-route-pub-01/02`
+        - 1 for private subnet
+            - eg : `ninja-route-priv-01/02`
 
-After this you need to implement these 2 below deployment strategies:
-Must Do
-    - Recreate deployment 
-    - Rolling deployment 
-Good to  Do
-    - Blue Green deployment
-    - Canary deployment 
+**Note: Make maximum use of variables and output files**
 
-Recommendation
-    - Don't straight forward jump into creating the utility, first do it manually
 
-github-link --> https://github.com/OT-TRAINING/DeploymentStrategies
+## Lets run the code first terraform init
+## Command : terraform init
+![image](https://github.com/Kiran-dehlikar/test/assets/104997588/bdbea11b-0448-481a-8804-df0b05b1ad6e)
 
-Hint :
-1. Use ASG
-2. Use LB
-3. Use EC2 service
-4. Use AMI Snapshot
+## Terraform plan
+## Command : terraform plan
 
-# aws
-![Screenshot from 2024-01-22 15-53-09](https://github.com/Kiran-dehlikar/test/assets/104997588/cfe37b90-0d9d-493f-b526-b0269ced5981)
-![Screenshot from 2024-01-22 16-48-04](https://github.com/Kiran-dehlikar/test/assets/104997588/c8f41260-f949-4457-9e13-7cb33649fbf8)
-![Screenshot from 2024-01-22 16-48-15](https://github.com/Kiran-dehlikar/test/assets/104997588/f4e752ea-59b5-45ff-8469-d62e3ccdb609)
+![image](https://github.com/Kiran-dehlikar/test/assets/104997588/8a009950-472a-4f5d-9504-e9655148e52d)
+
+## Terraform apply
+## Command : terraform apply --auto-approve
+![image](https://github.com/Kiran-dehlikar/test/assets/104997588/f8a9aa3a-fbd2-44eb-af16-3bb8e21e4c0f)
+
+## Verify the infra
+### VPC
+![image](https://github.com/Kiran-dehlikar/test/assets/104997588/903f8666-7858-48c4-b812-8323eb42af28)
+
+## SUBNET
+![image](https://github.com/Kiran-dehlikar/test/assets/104997588/da132375-239e-41b2-966d-ba4da4aaca04)
+
+## IGW
+![image](https://github.com/Kiran-dehlikar/test/assets/104997588/b93d76cf-8593-41ac-9b64-fa3a7894d6f2)
+
+## NAT
+![image](https://github.com/Kiran-dehlikar/test/assets/104997588/e2f93563-29ac-4e25-a385-6ea14c5c5545)
+
+## Route Table
+![image](https://github.com/Kiran-dehlikar/test/assets/104997588/2ca0bd54-70e2-43c9-95df-b9016ed71685)
+
+## Instance
+![image](https://github.com/Kiran-dehlikar/test/assets/104997588/bd8f5e86-1451-4f56-b2e4-0ab280af4add)
 
 
 ## Authors
